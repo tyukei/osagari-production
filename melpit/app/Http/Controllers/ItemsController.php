@@ -44,8 +44,8 @@ class ItemsController extends Controller
     ->paginate(52);
 
     return view('items.items')
-    // ->with('items', $items);
-    ->with('item', $item);
+     ->with('items', $items);
+
 
   }
 
