@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Item extends Model
 {
-protected $table = 'item';
   // 出品中
   const STATE_SELLING = 'selling';
   // 購入済み
   const STATE_BOUGHT = 'bought';
 
+  protected $table = 'item';
   protected $casts = [
     'bought_at' => 'datetime',
   ];
