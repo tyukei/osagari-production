@@ -11,8 +11,6 @@ class Item extends Model
   // 購入済み
   const STATE_BOUGHT = 'bought';
 
-  protected $table = 'item';
-
   protected $casts = [
     'bought_at' => 'datetime',
   ];
