@@ -44,9 +44,7 @@ class ItemsController extends Controller
     ->paginate(52);
 
     return view('items.items')
-     ->with('items', $items);
-
-
+    ->with('items', $items);
   }
 
   private function escape(string $value)
