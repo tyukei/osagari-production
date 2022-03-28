@@ -41,7 +41,7 @@ class ItemsController extends Controller
 
     $items = $query->orderByRaw( "FIELD(state, '" . Item::STATE_SELLING . "', '" . Item::STATE_BOUGHT . "')" )
     ->orderBy('id', 'DESC')
-    ->paginate(500);
+    ->paginate(10);
 
     return view('items.items')
     ->with('items', $items);
