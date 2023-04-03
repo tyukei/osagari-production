@@ -35,7 +35,6 @@ RUN if [ ${CHANGE_SOURCE} = true ]; then \
 
 # Start as root
 USER root
-
 ###########################################################################
 # Laradock non-root user:
 ###########################################################################
@@ -1063,7 +1062,7 @@ RUN if [ ${INSTALL_SYMFONY} = true ]; then \
 ARG INSTALL_PYTHON=false
 
 RUN if [ ${INSTALL_PYTHON} = true ]; then \
-  apt-get -y install python python-pip python-dev build-essential  \
+  apt-get -y install python python3-pip python-dev build-essential  \
   && python -m pip install --upgrade pip  \
   && python -m pip install --upgrade virtualenv \
 ;fi

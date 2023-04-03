@@ -54,7 +54,7 @@ RUN set -xe; \
       if [ ${LARADOCK_PHP_VERSION} = "7.3" ] || [ ${LARADOCK_PHP_VERSION} = "7.4" ]; then \
         docker-php-ext-configure zip; \
       else \
-        docker-php-ext-configure zip --with-libzip; \
+        docker-php-ext-configure zip ; \
       fi && \
       # Install the zip extension
       docker-php-ext-install zip && \
